@@ -31,7 +31,7 @@ const VideoText: React.FC<VideoTextProps> = ({ ready, ...props }) => {
 	const isTabletOrMobile = useIsTabletOrMobile();
 	const position = isTabletOrMobile
 		? [
-				props.position[0] - 1.15,
+				props.position[0],
 				props.position[1] - 0.75,
 				props.position[2],
 		  ]
@@ -49,14 +49,14 @@ const VideoText: React.FC<VideoTextProps> = ({ ready, ...props }) => {
 	return (
 		<>
 			<Text
-				fontSize={isTabletOrMobile ? 0.375 : 0.5}
+				fontSize={isTabletOrMobile ? 0.25 : 0.5}
 				position={new THREE.Vector3(...position)}
 				{...fontConfig}
 			>
 				#FreeYourMusic
 			</Text>
 			<Text
-				fontSize={isTabletOrMobile ? 0.15 : 0.2}
+				fontSize={isTabletOrMobile ? 0.125 : 0.2}
 				position={[
 					position[0],
 					position[1] - (isTabletOrMobile ? 0.25 : 0.5),
