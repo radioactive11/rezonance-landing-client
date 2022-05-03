@@ -16,6 +16,7 @@ import { useIsTabletOrMobile, useLoadingScreen } from "utils/hooks";
 import { NextPage } from "next";
 import { IntroProps, VideoTextProps } from "utils/types";
 import Overlay from "components/Overlay";
+import Head from "next/head";
 
 const Effects : React.FC = () => {
 	return (
@@ -88,6 +89,9 @@ const App: NextPage = () => {
 	useLoadingScreen(ready, setClicked);
 	return (
 		<>
+		<Head>
+			<title>Rezonance - #FreeYourMusic</title>
+		</Head>
 			<Canvas
 				gl={{ alpha: false }}
 				camera={{ position: [0, 2, 100], fov: 15 }}
