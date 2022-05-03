@@ -21,7 +21,6 @@ import Head from "next/head";
 const Effects : React.FC = () => {
 	return (
 		<EffectComposer>
-			<Noise opacity={0.1}/>
 			<Vignette eskil={false} offset={0.1} darkness={1.1}/>
 		</EffectComposer>
 	)
