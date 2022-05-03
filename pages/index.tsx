@@ -22,6 +22,7 @@ const Effects : React.FC = () => {
 	return (
 		<EffectComposer>
 			<Noise opacity={0.1}/>
+			<Bloom luminanceThreshold={0.55} luminanceSmoothing={0.9} height={500} />
 			<Vignette eskil={false} offset={0.1} darkness={1.1}/>
 		</EffectComposer>
 	)
